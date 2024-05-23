@@ -1,4 +1,5 @@
 defmodule Counter.Counter do
+  @moduledoc false
   use Agent
 
   def start_link(opts \\ []), do: Agent.start_link(fn -> 0 end, opts)

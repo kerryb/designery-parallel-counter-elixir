@@ -1,6 +1,7 @@
 defmodule Counter.CounterTest do
-  alias Counter.Counter
   use ExUnit.Case, async: true
+
+  alias Counter.Counter
 
   describe "Counter.Counter" do
     setup do
