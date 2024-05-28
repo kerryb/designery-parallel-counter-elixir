@@ -4,7 +4,7 @@ defmodule DummyService do
 
   def run do
     count = Counter.value()
-    10 |> :timer.seconds() |> :rand.uniform() |> Process.sleep()
+    1 |> :timer.seconds() |> :rand.uniform() |> Process.sleep()
     count
   end
 end
