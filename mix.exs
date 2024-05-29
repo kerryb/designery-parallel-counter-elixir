@@ -1,9 +1,9 @@
-defmodule Counter.MixProject do
+defmodule ParallelSum.MixProject do
   use Mix.Project
 
   def project do
     [
-      app: :counter,
+      app: :parallel_sum,
       version: "0.1.0",
       elixir: "~> 1.16",
       elixirc_paths: elixirc_paths(Mix.env()),
@@ -19,7 +19,7 @@ defmodule Counter.MixProject do
   def application do
     [
       extra_applications: [:logger],
-      mod: {Counter.Application, []}
+      mod: {ParallelSum.Application, []}
     ]
   end
 

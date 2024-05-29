@@ -1,9 +1,9 @@
-defmodule Counter.TotalTest do
+defmodule ParallelSum.TotalTest do
   use ExUnit.Case, async: true
 
-  alias Counter.Total
+  alias ParallelSum.Total
 
-  describe "Counter.Total" do
+  describe "ParallelSum.Total" do
     setup do
       {:ok, total} = start_supervised(Total)
       %{total: total}

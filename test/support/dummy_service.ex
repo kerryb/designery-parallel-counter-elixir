@@ -1,6 +1,6 @@
 defmodule DummyService do
   @moduledoc false
-  alias Counter.Counter
+  alias ParallelSum.Counter
 
   def run do
     count = Counter.value()

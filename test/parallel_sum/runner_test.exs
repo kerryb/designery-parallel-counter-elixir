@@ -1,12 +1,13 @@
-defmodule Counter.RunnerTest do
+defmodule ParallelSum.RunnerTest do
   use ExUnit.Case, async: false
 
-  alias Counter.Runner
-  alias Counter.Total
+  alias ParallelSum.Counter
+  alias ParallelSum.Runner
+  alias ParallelSum.Total
 
-  describe "Counter.Runner.run/0" do
+  describe "ParallelSum.Runner.run/0" do
     setup do
-      Counter.Counter.reset()
+      Counter.reset()
       Total.reset()
       :ok
     end

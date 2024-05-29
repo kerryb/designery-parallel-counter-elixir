@@ -1,4 +1,4 @@
-defmodule Counter.Counter do
+defmodule ParallelSum.Counter do
   @moduledoc false
   use Agent
 

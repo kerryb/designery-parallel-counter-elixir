@@ -1,9 +1,9 @@
-defmodule Counter.CounterTest do
+defmodule ParallelSum.CounterTest do
   use ExUnit.Case, async: true
 
-  alias Counter.Counter
+  alias ParallelSum.Counter
 
-  describe "Counter.Counter" do
+  describe "ParallelSum.Counter" do
     setup do
       {:ok, counter} = Counter.start_link([])
       %{counter: counter}

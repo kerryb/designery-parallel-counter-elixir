@@ -1,6 +1,6 @@
-defmodule Counter.Runner do
+defmodule ParallelSum.Runner do
   @moduledoc false
-  alias Counter.Total
+  alias ParallelSum.Total
 
   def run(fun, number_of_processes) do
     1..number_of_processes
