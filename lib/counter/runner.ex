@@ -2,8 +2,8 @@ defmodule Counter.Runner do
   @moduledoc false
   alias Counter.Total
 
-  def run(fun) do
-    1..100
+  def run(fun, number_of_processes) do
+    1..number_of_processes
     |> Enum.map(fn _ -> Task.async(fn -> run_batch(fun) end) end)
     |> Task.await_many(:timer.minutes(1))
   end

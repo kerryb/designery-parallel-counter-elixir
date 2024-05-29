@@ -6,13 +6,20 @@ defmodule Counter.RunnerTest do
 
   describe "Counter.Runner.run/0" do
     setup do
-      {:ok, _} = Application.ensure_all_started(:counter)
+      Counter.Counter.reset()
+      Total.reset()
       :ok
     end
 
-    test "Ends up with the correct total in a reasonable time" do
-      {seconds, _} = :timer.tc(Runner, :run, [&DummyService.run/0], :second)
+    test "Ends up with the correct total in a reasonable time with 1,000 processes" do
+      {seconds, _} = :timer.tc(Runner, :run, [&DummyService.run/0, 100], :second)
       assert Total.value() == 500_500
+      assert seconds < 20
+    end
+
+    test "Ends up with the correct total in a reasonable time with 100,000 processes" do
+      {seconds, _} = :timer.tc(Runner, :run, [&DummyService.run/0, 100_000], :second)
+      assert Total.value() == 500_000_500_000
       assert seconds < 20
     end
   end

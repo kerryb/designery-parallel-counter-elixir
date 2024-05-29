@@ -14,5 +14,12 @@ defmodule Counter.CounterTest do
       assert Counter.value(counter) == 2
       assert Counter.value(counter) == 3
     end
+
+    test "can be reset to zero", %{counter: counter} do
+      assert Counter.value(counter) == 1
+      assert Counter.value(counter) == 2
+      :ok = Counter.reset(counter)
+      assert Counter.value(counter) == 1
+    end
   end
 end
