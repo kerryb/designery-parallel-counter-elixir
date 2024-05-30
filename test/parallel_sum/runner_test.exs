@@ -2,8 +2,8 @@ defmodule ParallelSum.RunnerTest do
   use ExUnit.Case, async: false
 
   alias ParallelSum.Counter
-  alias ParallelSum.Runner
   alias ParallelSum.DummyService
+  alias ParallelSum.Runner
   alias ParallelSum.Total
 
   describe "ParallelSum.Runner.run/0" do
