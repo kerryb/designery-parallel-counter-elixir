@@ -1,5 +1,11 @@
 defmodule ParallelSum.Runner do
-  @moduledoc false
+  @moduledoc """
+  Add successive values returned from `ParallelSum.DummyService` to `ParallelSum.Total`.
+
+  It runs the specified number of tasks in parallel, and each task retreives
+  and adds ten counter values (one after the other).
+  """
+
   alias ParallelSum.Total
 
   def run(fun, number_of_processes) do

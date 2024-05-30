@@ -1,5 +1,8 @@
 defmodule ParallelSum.Counter do
-  @moduledoc false
+  @moduledoc """
+  A simple Agent that returns successive numbers.
+  """
+
   use Agent
 
   def start_link(opts \\ []), do: Agent.start_link(fn -> 0 end, opts)

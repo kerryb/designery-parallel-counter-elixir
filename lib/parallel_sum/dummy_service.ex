@@ -1,5 +1,9 @@
 defmodule ParallelSum.DummyService do
-  @moduledoc false
+  @moduledoc """
+  A simulation of some kind of external service that retreives the next counter
+  value, then pauses for a random time up to one second before returning it.
+  """
+
   alias ParallelSum.Counter
 
   def run do
