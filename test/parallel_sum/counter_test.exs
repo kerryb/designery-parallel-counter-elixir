@@ -10,16 +10,16 @@ defmodule ParallelSum.CounterTest do
     end
 
     test "maintains a persistent counter, starting from 1", %{counter: counter} do
-      assert Counter.value(counter) == 1
-      assert Counter.value(counter) == 2
-      assert Counter.value(counter) == 3
+      assert Counter.next_value(counter) == 1
+      assert Counter.next_value(counter) == 2
+      assert Counter.next_value(counter) == 3
     end
 
     test "can be reset to zero", %{counter: counter} do
-      assert Counter.value(counter) == 1
-      assert Counter.value(counter) == 2
+      assert Counter.next_value(counter) == 1
+      assert Counter.next_value(counter) == 2
       :ok = Counter.reset(counter)
-      assert Counter.value(counter) == 1
+      assert Counter.next_value(counter) == 1
     end
   end
 end

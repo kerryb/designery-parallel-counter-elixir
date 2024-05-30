@@ -3,7 +3,7 @@ defmodule ParallelSum.DummyService do
   alias ParallelSum.Counter
 
   def run do
-    count = Counter.value()
+    count = Counter.next_value()
     1 |> :timer.seconds() |> :rand.uniform() |> Process.sleep()
     count
   end
