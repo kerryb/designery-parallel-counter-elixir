@@ -12,7 +12,7 @@ defmodule ParallelSum.RunnerTest do
       :ok
     end
 
-    test "Ends up with the correct total in a reasonable time with 1,000 processes" do
+    test "Ends up with the correct total in a reasonable time with 100 processes" do
       {seconds, _} = :timer.tc(Runner, :run, [&DummyService.run/0, 100], :second)
       assert Total.value() == 500_500
       assert seconds < 20
