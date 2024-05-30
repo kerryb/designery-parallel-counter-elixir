@@ -3,6 +3,7 @@ defmodule ParallelSum.RunnerTest do
 
   alias ParallelSum.Counter
   alias ParallelSum.Runner
+  alias ParallelSum.DummyService
   alias ParallelSum.Total
 
   describe "ParallelSum.Runner.run/0" do

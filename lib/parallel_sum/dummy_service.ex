@@ -1,4 +1,4 @@
-defmodule DummyService do
+defmodule ParallelSum.DummyService do
   @moduledoc false
   alias ParallelSum.Counter
 
