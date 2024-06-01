@@ -8,6 +8,10 @@ defmodule ParallelSum.Total do
 
   use GenServer
 
+  #
+  # Client
+  #
+
   def start_link(opts \\ []), do: GenServer.start_link(__MODULE__, [], opts)
 
   def add(total \\ __MODULE__, addend), do: GenServer.cast(total, {:add, addend})
@@ -15,6 +19,10 @@ defmodule ParallelSum.Total do
   def reset(total \\ __MODULE__), do: GenServer.cast(total, :reset)
 
   def value(total \\ __MODULE__), do: GenServer.call(total, :value)
+
+  #
+  # Server
+  #
 
   @impl GenServer
   def init(_init_arg), do: {:ok, 0}
